@@ -10,6 +10,8 @@ public interface FilePaths
 	
 	String EXCEL_FILEPATH="./src/test/resources/Testdataforautomation.xlsx";
 	String PROPERTY_FILEPATH="./src/test/resources/commondata.properties";
+	String PROPERTY_FILEPATH2="./src/test/resources/commondata2.properties";
+
 	
 	String HOME_MODULE_SHEET="Home_Module";
 	String EDITPROFILE_SHEET="Editprofile";

@@ -7,7 +7,10 @@
 public enum PropertieFileKeys
 { 
 	
-	 URL("url"),EMAIL("email"),PASSWORD("password"),BROWSER("browser"),IMPLICITLYWAIT("implicitlyWait");
+	 URL("url"),EMAIL("email"),PASSWORD("password"),BROWSER("browser"),IMPLICITLYWAIT("implicitlyWait"),
+	 
+	 ADMINUSERNAME("adminusername"),ADMINPASSWORD("adminpassword"),TIMEOUT("timeout");
+	
 	private String keys;
 	
 	private PropertieFileKeys(String keys) 

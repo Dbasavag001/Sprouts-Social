@@ -19,13 +19,9 @@ public class ListernersClass  implements ITestListener
 	@Override
 	public void onTestStart(ITestResult result) 
 	{
-	  ExtentSparkReporter spark=new ExtentSparkReporter("./ExtendRepots/report.html");
-	  spark.config().setDocumentTitle("Extent Html Report");
-	  spark.config().setReportName("Test Case Exection Report");
-	  
-	  
-	   report=new ExtentReports();
-	   report.attachReporter(spark);
+		System.out.println("on test start");
+		 test = report.createTest(result.getMethod().getMethodName());
+		 ThreadLocalclass.settest(test);
 	   
 		
 	}
@@ -33,8 +29,7 @@ public class ListernersClass  implements ITestListener
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("Test Case Success");
-		 test = report.createTest(result.getMethod().getMethodName());
-		 ThreadLocalclass.settest(test);
+		 ThreadLocalclass.gettest().pass(result.getMethod().getMethodName());
 		
 	}
 
@@ -66,13 +61,17 @@ public class ListernersClass  implements ITestListener
 
 	@Override
 	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onStart(context);
+		 ExtentSparkReporter spark=new ExtentSparkReporter("./ExtendRepots/report.html");
+		  spark.config().setDocumentTitle("Extent Html Report");
+		  spark.config().setReportName("Test Case Execution Report");
+		   report=new ExtentReports();
+		   report.attachReporter(spark);
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		
+		System.out.println("Execution of test finished");
+		report.flush();
 	}
 
 }
