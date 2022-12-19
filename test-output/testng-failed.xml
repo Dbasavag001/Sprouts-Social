@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.sportsocial.Homemodule.ComentthepostinOtheruser">
+      <class name="com.sportsocial.Homemodule.AddStatusTest">
         <methods>
-          <include name="updatethepost"/>
-          <include name="LogoutAppl"/>
-          <include name="commentforpostbyothers"/>
           <include name="closetheApplication"/>
-          <include name="LogintoApp"/>
+          <include name="LogoutAppl"/>
+          <include name="addStatusWithPhoto"/>
           <include name="OpenApllication"/>
+          <include name="LogintoApp"/>
         </methods>
-      </class> <!-- com.sportsocial.Homemodule.ComentthepostinOtheruser -->
+      </class> <!-- com.sportsocial.Homemodule.AddStatusTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

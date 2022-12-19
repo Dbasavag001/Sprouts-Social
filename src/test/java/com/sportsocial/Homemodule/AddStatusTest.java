@@ -18,15 +18,13 @@ public class AddStatusTest extends BaseClassAdmin {
 	public void addStatusWithPhoto() throws InterruptedException {
 		uploadstatus= new Uploadstatus(driver);
 		expectedText = excelfile.getExcelData(FilePaths.HOME_MODULE_SHEET, 10, 0)+javautil.getradomNo(100);
-		expectedImage = excelfile.getExcelData(FilePaths.HOME_MODULE_SHEET, 17, 1);
+		expectedImage = excelfile.getExcelData(FilePaths.HOME_MODULE_SHEET, 18, 1);
 		file=new File(expectedImage);
 		String expImage = file.getAbsolutePath();
 				
 		System.out.println(expectedText);
 		System.out.println(expImage);
 		uploadstatus.shareThepost(expectedText, expImage);
-		
-		
 	}
 
 }
