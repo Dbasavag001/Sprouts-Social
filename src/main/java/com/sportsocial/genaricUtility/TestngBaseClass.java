@@ -65,9 +65,6 @@ public class TestngBaseClass
 		 loginaction=new LoginAction(driver);
 		 commonpage.clickonSigninButton();
 		 loginaction.logintoapplication(email, password);
-		 
-		 
-		 
 	}
 
 	/**
